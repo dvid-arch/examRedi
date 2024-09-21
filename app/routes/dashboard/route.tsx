@@ -6,10 +6,10 @@ export default function Route() {
     return (
         <div className="">
 
-            <div className="h-screen overflow-y-auto w-[250px] absolute border">
+            <div className="hidden lg:block h-screen overflow-y-auto w-[250px] absolute border">
                 <Side />
             </div>
-            <div className="ml-[250px] relative h-screen overflow-auto flex flex-col">
+            <div className="lg:ml-[250px] relative h-screen overflow-auto flex flex-col">
                 <Header />
                 <div className="flex-1 overflow-auto">
                     <Outlet />

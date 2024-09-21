@@ -4,8 +4,8 @@ import { Action } from "./component/takeAction";
 export default function Index() {
     return (
         <div className="text-black px-8">
-            <div className="flex gap-8">
-                <div>
+            <div className="flex flex-col md:flex-row gap-8">
+                <div className="flex-1">
 
                     <BentoGrid />
                 </div>

@@ -6,7 +6,7 @@ function Side() {
    
 
   return (
-    <aside className='px-4 pt-4 pb-8'>
+    <aside className='hidden px-4 pt-4 pb-8 md:block'>
         <div className='flex  flex-col'>
             <Logo />
             <nav className='py-10'>
