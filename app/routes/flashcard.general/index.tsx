@@ -1,6 +1,6 @@
 import React from 'react'
-import Nav from './component/nav'
-import Cards from './component/cards'
+import Nav from '../flashcard.general/component/nav'
+import Cards from '../flashcard.general/component/cards'
 import { Outlet } from '@remix-run/react'
 
 function Index() {

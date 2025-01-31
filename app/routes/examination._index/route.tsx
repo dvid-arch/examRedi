@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function Route() {
     return (<div className="py-10 px-8">
@@ -7,10 +6,10 @@ export default function Route() {
                     <h2 className="text-4xl mb-4">Study For one Course</h2>
                     <p className="mb-4">Test your readiness for one Subject</p>
                     <div className="w-full">
-                        <select name="course" id="course" className=" bg-yellow-100 border py-1 pr-8 w-[200px]" >
+                        <select name="course" id="course" className=" bg-blue-100 border py-1 pr-8 w-[200px]" >
                             <option value="english">English</option>
                         </select>
-                    </div>
+                    </div>  
                     <div className="mt-4">
                         <p className="mb-2">Deselect a topic you've mastered already</p>
                         <form action="#" className="block ">
@@ -29,7 +28,7 @@ export default function Route() {
                                     <label htmlFor="oral">Oral English</label>
                                 </div>
                             </div>
-                            <button className="py-3 px-8 block text-center border w-full bg-yellow-500 text-white font-bold text-xl">Submit</button>
+                            <button className="py-3 px-8 block text-center border w-full bg-blue-500 text-white font-bold text-xl">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -38,21 +37,21 @@ export default function Route() {
                         <h2 className="text-4xl mb-4">Study For one Course</h2>
                         <p className="mb-4">Test your readiness this examination</p>
                         <div className="w-full grid grid-cols-2 gap-4">
-                            <select name="course" id="course" className=" bg-yellow-900/10 border py-1 pr-8 w-full" >
+                            <select name="course" id="course" className=" bg-blue-900/10 border py-1 pr-8 w-full" >
                                 <option value="english">English</option>
                             </select>
-                            <select name="course" id="course" className=" bg-yellow-100 border py-1 pr-8 w-full" >
+                            <select name="course" id="course" className=" bg-blue-100 border py-1 pr-8 w-full" >
                                 <option value="english">English</option>
                             </select>
-                            <select name="course" id="course" className=" bg-yellow-100 border py-1 pr-8 w-full" >
+                            <select name="course" id="course" className=" bg-blue-100 border py-1 pr-8 w-full" >
                                 <option value="english">English</option>
                             </select>
-                            <select name="course" id="course" className=" bg-yellow-100 border py-1 pr-8 w-full" >
+                            <select name="course" id="course" className=" bg-blue-100 border py-1 pr-8 w-full" >
                                 <option value="english">English</option>
                             </select>
                         </div>
                     </div>
-                    <button className="py-3 px-8 block text-center border w-full bg-yellow-500 text-white font-bold text-xl">Submit</button>
+                    <button className="py-3 px-8 block text-center border w-full bg-blue-500 text-white font-bold text-xl">Submit</button>
                 </div>
             </div>
         </div>)

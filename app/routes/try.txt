@@ -1,0 +1,133 @@
+import React from 'react';
+
+const StudyGuideHomePage = () => {
+  return (
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Study Guide</h1>
+      <div className="bg-white rounded-lg shadow p-4">
+        <h2 className="text-xl font-semibold mb-2">Quick Access Topics</h2>
+        <ul className="space-y-2">
+          <li className="bg-gray-200 p-2 rounded">Topic 1</li>
+          <li className="bg-gray-200 p-2 rounded">Topic 2</li>
+          <li className="bg-gray-200 p-2 rounded">Topic 3</li>
+        </ul>
+      </div>
+      <div className="mt-6 bg-white rounded-lg shadow p-4">
+        <h2 className="text-xl font-semibold mb-2">Progress Tracker</h2>
+        <p>You have completed 60% of your study guides.</p>
+      </div>
+    </div>
+  );
+};
+
+export default StudyGuideHomePage;
+
+// Study Guide Detail Page Component
+const StudyGuideDetailPage = ({ topic }) => {
+  return (
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">{topic.title}</h1>
+      <p className="text-lg mb-4">{topic.description}</p>
+      <div className="bg-white rounded-lg shadow p-4 space-y-4">
+        {topic.sections.map((section, index) => (
+          <div key={index}>
+            <h2 className="text-xl font-semibold">{section.title}</h2>
+            <p>{section.content}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default StudyGuideDetailPage;
+
+// Create Your Own Study Guide Page Component
+const CreateStudyGuidePage = () => {
+  return (
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Create Your Own Study Guide</h1>
+      <form className="bg-white rounded-lg shadow p-4">
+        <label className="block mb-2 font-semibold">Title</label>
+        <input
+          type="text"
+          className="w-full p-2 mb-4 border border-gray-300 rounded"
+        />
+        <label className="block mb-2 font-semibold">Description</label>
+        <textarea
+          className="w-full p-2 mb-4 border border-gray-300 rounded"
+        ></textarea>
+        <button className="bg-blue-500 text-white p-2 rounded">Save Guide</button>
+      </form>
+    </div>
+  );
+};
+
+export default CreateStudyGuidePage;
+
+// Notes & Bookmarks Page Component
+const NotesBookmarksPage = () => {
+  return (
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Notes & Bookmarks</h1>
+      <div className="bg-white rounded-lg shadow p-4">
+        <h2 className="text-xl font-semibold mb-2">My Notes</h2>
+        <ul className="space-y-2">
+          <li className="bg-gray-200 p-2 rounded">Note 1</li>
+          <li className="bg-gray-200 p-2 rounded">Note 2</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default NotesBookmarksPage;
+
+// Practice Quiz Pop-Up Component
+const PracticeQuizPopup = ({ questions, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold mb-4">Practice Quiz</h2>
+        {questions.map((q, index) => (
+          <div key={index} className="mb-4">
+            <p>{q.question}</p>
+            <ul className="space-y-2">
+              {q.options.map((option, i) => (
+                <li key={i} className="bg-gray-200 p-2 rounded">{option}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <button
+          className="bg-blue-500 text-white p-2 rounded mt-4"
+          onClick={onClose}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PracticeQuizPopup;
+
+// Completion Pop-Up Component
+const CompletionPopup = ({ topic, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h2 className="text-xl font-bold mb-4">Congratulations! 🎉</h2>
+        <p>You’ve completed the study guide on {topic}!</p>
+        <button
+          className="bg-green-500 text-white p-2 rounded mt-4"
+          onClick={onClose}
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CompletionPopup;
