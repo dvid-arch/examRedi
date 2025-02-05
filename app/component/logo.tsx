@@ -2,7 +2,7 @@
 
 function Logo() {
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex w-full items-center gap-2">
             <div className=" grid grid-cols-2 w-fit gap-2">
                 <div className="w-4 rotate-45 h-4  border bg-blue-500"></div>
                 <div className="w-4 rotate-45 h-4  border bg-red-500"></div>
